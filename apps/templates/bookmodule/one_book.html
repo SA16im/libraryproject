@@ -1,0 +1,13 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+{% block title %} Show one Book {% endblock title %}
+
+{% block content %}
+    <a href="{% url 'books.list_books' %}">Go Back</a> [cite: 92]
+    <h1>Details of Book 1</h1> [cite: 93]
+    <h2>Internet & World Wide Web</h2> [cite: 94]
+    <p><strong>Author:</strong> Deitel</p> [cite: 95]
+    <p>This book provides a clear introduction to web programming.</p> [cite: 96]
+    <img src="{% static 'book1.jpg' %}" alt="Book 1" width="300"> [cite: 98]
+{% endblock content %}

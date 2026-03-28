@@ -2,10 +2,13 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def index(request):
-    return render(request, 'bookmodule/index.html')
+    return render(request, "bookmodule/index.html")
+
+def list_books(request):
+    return render(request, 'bookmodule/list_books.html')
 
 def viewbook(request, bookId):
-    return HttpResponse(f"Displaying book with ID: {bookId}")
+    return render(request, 'bookmodule/one_book.html', {'bookId': bookId})
 
-def welcome(request):
-    return HttpResponse("Welcome to our Library!")
+def aboutus(request):
+    return render(request, 'bookmodule/aboutus.html')
